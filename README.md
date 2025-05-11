@@ -26,6 +26,7 @@ Skillsets represent the "function calling" pattern - where Copilot's AI determin
 3. **Parameter Mapping**: Copilot extracts parameters from the user's request and maps them to your schema
 4. **API Call**: Copilot calls your endpoint with the extracted parameters
 5. **Response Handling**: Your endpoint returns data that Copilot presents back to the user
+6. **Error Handling**: Your skillset gracefully handles errors and provides helpful feedback when requests cannot be processed
 
 ### Architectural Model
 - **Skillsets**: Define up to 5 API endpoints that Copilot can call directly. Copilot handles all AI interactions, prompt engineering, and response formatting.
