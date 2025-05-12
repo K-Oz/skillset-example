@@ -4,6 +4,23 @@
 
 This code sample demonstrates building a Copilot Extension using the skillsets approach rather than a traditional agent. This extension is designed to generate random test and example data for a number of development purposes, by calling publicly available APIs.
 
+## Clouds of Innovation
+
+Floating high above the digital plain,  
+Clouds of data, wisdom they contain.  
+Skillsets weaving through the azure sky,  
+Extensions reaching where ideas fly.  
+
+Like APIs that bridge from shore to shore,  
+These clouds connect what wasn't linked before.  
+Copilot navigates this misty space,  
+Transforming code with elegant grace.  
+
+As cumulus collect their treasured rain,  
+So knowledge gathers in this domain.  
+The clouds above, both fleeting and profound,  
+Inspire the code that makes our tools abound.  
+
 ### Architectural Model
 - **Skillsets**: Define up to 5 API endpoints that Copilot can call directly. Copilot handles all AI interactions, prompt engineering, and response formatting.
 - **Agents**: Provide full control over the interaction flow, including custom prompt crafting and specific LLM model selection.
