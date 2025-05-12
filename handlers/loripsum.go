@@ -97,7 +97,7 @@ func Loripsum(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	resp, err := (&http.Client{}).Do(req)
+	resp, err := httpClientCreator().Do(req)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
