@@ -128,3 +128,27 @@ This bot provides a passthrough to a couple of other APIs:
 - [About skillsets](https://docs.github.com/en/copilot/building-copilot-extensions/building-a-copilot-skillset-for-your-copilot-extension/about-copilot-skillsets)
 - [About building Copilot Extensions](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions)
 - [Set up process](https://docs.github.com/en/copilot/building-copilot-extensions/setting-up-copilot-extensions)
+
+## Cloud Poem
+
+### Whispers in the Sky
+
+Billowing giants in endless blue,
+Cotton castles drifting through,
+Sunlight dancing on edges white,
+Transforming, shifting, day and night.
+
+Cirrus wisps like painted strokes,
+Cumulus puffs in scattered cloaks,
+Nimbus bearers of rain and storm,
+Ever-changing in shape and form.
+
+Some days they race across the sky,
+Other times, they barely sigh,
+Nature's canvas above our heads,
+From dawn's first light till day has fled.
+
+Silent travelers on winds unseen,
+Between the earth and heaven's sheen,
+Clouds—ephemeral works of art,
+In the atmosphere's endless chart.
