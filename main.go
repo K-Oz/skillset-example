@@ -19,6 +19,7 @@ func run() error {
 	http.HandleFunc("/random-commit-message", handlers.CommitMessage)
 	http.HandleFunc("/random-lorem-ipsum", handlers.Loripsum)
 	http.HandleFunc("/random-user", handlers.User)
+	http.HandleFunc("/random-poem", handlers.Poem)
 	http.HandleFunc("/_ping", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("OK"))
 	})

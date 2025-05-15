@@ -26,10 +26,11 @@ Use agents instead if you need:
 
 ## Example Implementation
 
-This extension showcases the skillset approach by providing three simple endpoints that generate random development data:
+This extension showcases the skillset approach by providing four simple endpoints that generate random development data:
 - Random commit messages
 - Lorem ipsum text generation
 - Random user data
+- Poetry about "blitterblatter"
 
 ## Getting Started
 1. Clone the repository: 
@@ -96,6 +97,12 @@ Inference description: Generates data for a random user
 URL: https://<your ngrok domain>/random-user
 Parameters: { "type": "object" }
 Return type: String
+---
+Name: random_poem
+Inference description: Generates a poem about blitterblatter
+URL: https://<your ngrok domain>/random-poem
+Parameters: { "type": "object" }
+Return type: String
 ```
 
 2. In the `General` tab of your application settings (`https://github.com/settings/apps/<app_name>`)
@@ -114,6 +121,7 @@ Here's some example things:
 * `@skillset-example generate a lorem ipsum`
 * `@skillset-example generate a short lorem ipsum with 3 paragraphs`
 * `@skillset-example generate random user data`
+* `@skillset-example write a poem about blitterblatter`
 
 ## Implementation
 
@@ -122,6 +130,7 @@ This bot provides a passthrough to a couple of other APIs:
 * For commit messages, https://whatthecommit.com/
 * For Lorem Ipsum, https://loripsum.net/
 * For user data, https://randomuser.me/
+* Poems about blitterblatter are generated locally
 
 ## Documentation
 - [Using Copilot Extensions](https://docs.github.com/en/copilot/using-github-copilot/using-extensions-to-integrate-external-tools-with-copilot-chat)
