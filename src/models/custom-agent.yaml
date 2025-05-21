@@ -1,0 +1,10 @@
+model:
+  name: "Hypercognitive-Agent-1"
+  base: "gpt-4" # or other appropriate base model
+  temperature: 0.7
+  context_window: 16000
+  instruction_template: "agent-instructions.md"
+  system_behaviors:
+    - neural_symbolic_integration
+    - hypergraph_reasoning
+    - scheme_code_generation
