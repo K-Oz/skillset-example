@@ -1,0 +1,49 @@
+# Bolt Process Framework Configuration
+
+# General settings
+general:
+  environment: "production"  # development, staging, production
+  log_level: "info"         # debug, info, warning, error
+  experiments_dir: "bolt/experiments"
+  results_dir: "bolt/results"
+
+# Execution settings
+execution:
+  timeout: 3600             # Default timeout in seconds (1 hour)
+  max_retries: 3            # Maximum retry attempts for failed steps
+  parallel_steps: false     # Whether to execute steps in parallel
+  retry_delay: 5            # Delay between retries in seconds
+  
+# Daemon settings
+daemon:
+  enabled: true
+  poll_interval: 600        # Check for new experiments every 10 minutes
+  max_concurrent: 2         # Maximum concurrent experiments
+  idle_shutdown: false      # Shutdown when idle
+  
+# Operation settings
+operations:
+  search:
+    default_threshold: 0.7
+    max_results: 100
+  cluster:
+    default_algorithm: "kmeans"
+    default_k: 5
+  summarize:
+    default_temperature: 0.7
+    max_tokens: 500
+  publish:
+    default_channel: "echo-space"
+    
+# Monitoring settings
+monitoring:
+  enabled: true
+  metrics_interval: 60      # Collect metrics every 60 seconds
+  health_check_interval: 300 # Health check every 5 minutes
+  alert_on_failure: true
+  
+# Storage settings
+storage:
+  results_format: "json"
+  compress_old_results: true # Compress results older than retention period
+  retention_days: 30        # How long to keep results

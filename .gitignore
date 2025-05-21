@@ -1,0 +1,15 @@
+node_modules/
+#dist/
+#bin/
+#*.exe
+#*.log
+#.DS_Store
+#.env
+#__pycache__/
+#*.py[cod]
+#*$py.class
+#.venv/
+#.idea/
+#.vscode/
+#*.sublime-workspace
+#.netlify/

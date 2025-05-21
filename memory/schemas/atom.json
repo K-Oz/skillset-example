@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Marduk Memory Atom",
+  "description": "Schema for persistent memory atoms in the Cognitive Tokamak",
+  "type": "object",
+  "required": ["id", "type", "tags", "created_at", "content", "content_hash"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the memory atom",
+      "pattern": "^[a-z]+/[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-z0-9_]+$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of memory",
+      "enum": ["declarative", "episodic", "procedural", "semantic"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Categorization tags",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "actors": {
+      "type": "array",
+      "description": "Entities involved in this memory",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "Origin of the memory (e.g., chat_transcript, experiment, note)"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO timestamp of memory creation",
+      "format": "date-time"
+    },
+    "content": {
+      "type": "string",
+      "description": "The actual memory content"
+    },
+    "content_hash": {
+      "type": "string",
+      "description": "SHA-256 hash of the content for integrity verification",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "embeddings": {
+      "type": "object",
+      "description": "Vector representations of the memory content",
+      "required": ["model", "vector"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "The embedding model used"
+        },
+        "vector": {
+          "type": "array",
+          "description": "The embedding vector",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "description": "Relationships to other memory atoms",
+      "items": {
+        "type": "object",
+        "required": ["relation", "target"],
+        "properties": {
+          "relation": {
+            "type": "string",
+            "description": "Type of relationship (predicts, causes, related, etc.)"
+          },
+          "target": {
+            "type": "string",
+            "description": "ID of the target memory atom"
+          },
+          "weight": {
+            "type": "number",
+            "description": "Strength of the relationship (0.0 to 1.0)",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional context-specific metadata"
+    }
+  }
+}

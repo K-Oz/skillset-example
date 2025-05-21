@@ -1,0 +1,43 @@
+# Memory ETL Pipeline Configuration
+
+# General settings
+general:
+  environment: "production"  # development, testing, production
+  log_level: "info"          # debug, info, warning, error
+  data_directory: "/home/project/memory/atoms"
+
+# ETL process settings
+etl:
+  # Tokenization configuration
+  tokenizer:
+    max_token_length: 100
+    clean_html: true
+    normalize_whitespace: true
+    remove_urls: false
+    remove_email: true
+    
+  # Classification configuration  
+  classifier:
+    default_type: "declarative"
+    confidence_threshold: 0.6
+    min_tags: 1
+    max_tags: 10
+    
+  # Embedding configuration
+  embeddings:
+    model: "text-embedding-ada-002"
+    dimension: 1536
+    batch_size: 32
+    cache_vectors: true
+    
+  # Storage configuration
+  storage:
+    format: "json"
+    compression: false
+    append_timestamp: true
+    
+# Monitoring configuration
+monitoring:
+  stats_interval: 1000  # Process stats every N documents
+  log_progress: true
+  track_memory_usage: true

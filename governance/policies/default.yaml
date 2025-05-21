@@ -1,0 +1,36 @@
+name: "Default Toroidal Grammar Policy"
+description: "Default policy for balancing exploration and synthesis in the Marduk Cognitive Tokamak"
+version: "1.0.0"
+default_cycle_name: "Toroidal Cycle"
+
+lightface:
+  topic: "cognitive architecture"
+  duration: 2
+  constraints:
+    - "Focus on novel connections between concepts"
+    - "Consider practical applications of theoretical ideas"
+    - "Explore recursive patterns in system design"
+
+darkface:
+  title: "Synthesis Session"
+  criteria:
+    - name: "coherence"
+      description: "Logical consistency and unity of framework"
+      weight: 0.3
+    - name: "novelty"
+      description: "Presence of new insights or approaches"
+      weight: 0.2
+    - name: "utility"
+      description: "Practical applicability of the synthesis"
+      weight: 0.3
+    - name: "parsimony"
+      description: "Simplicity and elegance of the synthesis"
+      weight: 0.2
+
+cycle:
+  auto_advance: false
+  phases:
+    - "lightface"
+    - "darkface"
+  max_iterations: 3
+  quality_threshold: 0.7

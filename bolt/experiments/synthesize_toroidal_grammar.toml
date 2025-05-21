@@ -1,0 +1,10 @@
+name = "synthesize_toroidal_grammar"
+description = "Blend LightFace exploration with DarkFace synthesis."
+memory_tags = ["toroidal", "grammar"]
+
+steps = [
+  { op = "search",   query = "LightFace*", shovel = "wiki" },
+  { op = "cluster",  algorithm = "kmeans", k = 12 },
+  { op = "summarize", temperature = 0.4 },
+  { op = "publish",  channel = "echo-space" }
+]
